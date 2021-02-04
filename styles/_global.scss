@@ -1,0 +1,158 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+.bg-yellow{
+    background-color: #ffbb00;
+}
+.bg-green{
+    background-color: #7ec54d;
+}
+.bg-orange{
+    background-color: #ff6801;
+}
+.bg-blue{
+    background-color: #65b9e9;
+}
+.container{
+    padding: 0 10rem;
+}
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+}
+.shadow {
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175)!important;
+}
+.btn-saiba-mais{
+    color: #212529 !important;
+    span{
+        text-transform: uppercase;
+        font-size: 1.5rem;
+    }
+    .icon{
+        width: 2.2rem;
+    }
+}
+
+.modal{
+    .modal-content{
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important;
+        border-radius: 3rem;
+    }
+}
+
+.page{
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 60px);
+    opacity: 1;
+    -webkit-transition: opacity 800ms ease-in;
+       -moz-transition: opacity 800ms ease-in;
+        -ms-transition: opacity 800ms ease-in;
+         -o-transition: opacity 800ms ease-in;
+            transition: opacity 800ms ease-in;
+    svg{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        .polygon{
+            fill: transparent;
+            //stroke: black;
+            stroke-width: 1;
+
+            //background: linear-gradient(270deg,#bdbdbd,#fff 33.33%,#bdbdbd);
+            //background-size: 400% 400%;
+            -webkit-animation: AnimationName 3s ease infinite;
+            animation: AnimationName 3s ease infinite;
+
+            -webkit-transition: fill 100ms ease-in;
+            -moz-transition: fill 100ms ease-in;
+                -ms-transition: fill 100ms ease-in;
+                -o-transition: fill 100ms ease-in;
+                    transition: fill 100ms ease-in;
+            &:hover{
+                fill: rgba(255, 255, 255, 0.4);
+                -webkit-filter: drop-shadow( 6px 0 2px hsla(0, 0%, 0%, 0.2));
+                filter: drop-shadow( 6px 0 2px hsla(0, 0%, 0%, 0.2));
+            }
+        }
+    }
+    
+    .img-background{
+        position: relative;
+        top: 0;
+        //left: 0;
+        width: 100%;
+        height: auto;
+        box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,.075);
+        z-index: -1;
+    }
+    .navgation{
+        position: absolute;
+        padding: 0.8rem;
+        width: 100%;
+        z-index: 1;
+        top: 0px;
+        .btn{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                width: 1.2rem;
+            }
+        }
+    }
+}
+
+#page-only-video{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "video";
+    width: 100%;
+    height: calc(100vh - 55px);
+    .video{
+        grid-area: video;
+        display: flex;
+        iframe{
+            width: 100%;
+        }
+    }
+    .navgation{
+        position: fixed;
+        padding: 0.8rem;
+        width: 100%;
+        z-index: 1;
+        .btn{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+@-webkit-keyframes AnimationName {
+    0%{fill: transparent}
+    50%{fill: rgba(255, 255, 255, 0.6)}
+    100%{fill: transparent}
+}
+@-moz-keyframes AnimationName {
+    0%{fill: transparent}
+    50%{fill: rgba(255, 255, 255, 0.6)}
+    100%{fill: transparent}
+}
+@keyframes AnimationName { 
+    0%{fill: transparent}
+    50%{fill: rgba(255, 255, 255, 0.6)}
+    100%{fill: transparent}
+}

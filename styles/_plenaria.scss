@@ -1,0 +1,73 @@
+#page-video{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: "video"
+                        "chat";
+    width: 100%;
+    height: calc(100vh - 55px);
+    .video{
+        grid-area: video;
+        display: flex;
+        iframe{
+            width: 100%;
+            height: 200px;
+        }
+    }
+    .chat{
+        grid-area: chat;
+    }
+    .navgation{
+        position: fixed;
+        padding: 0.8rem;
+        width: 100%;
+        z-index: 1;
+        .btn{
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+}
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+    #page-video{
+        .video{
+            iframe{
+                height: 350px;
+            }
+        }
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+    
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+    
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+    #page-video{
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "video chat";
+        .video{
+            iframe{
+                height: 100%;
+            }
+        }
+    }
+}
